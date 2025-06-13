@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coffee_shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <!-- Pretty SVG Coffee Cup Logo -->
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 10px;"><ellipse cx="16" cy="24" rx="12" ry="4" fill="#ffb347"/><path d="M8 10c0-3 4-5 8-5s8 2 8 5v7c0 3-4 5-8 5s-8-2-8-5v-7z" fill="#fff" stroke="#ff6b6b" stroke-width="2"/><path d="M24 13c2 0 4 2 4 4s-2 4-4 4" stroke="#ff6b6b" stroke-width="2" fill="none"/></svg>
+                <span>Brew Bliss Café</span>
+            </div>
+            <form class="search-bar">
+                <span class="search-icon"><i class="fas fa-search"></i></span>
+                <input type="text" placeholder="Search">
+            </form>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#signin" class="btn btn-signin">Sign In</a>
+                <a href="#signup" class="btn btn-signup">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content hero-content-centered">
+            <h1>Welcome to <span class="brand">Brew Bliss Café</span></h1>
+            <p>Freshly brewed, expertly crafted, and served with a smile. Experience the taste of perfection in Nashik.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn">View Menu</a>
+                <a href="#contact" class="btn btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="feature">
+                <i class="fas fa-rocket"></i>
+                <h3>Fast Service</h3>
+                <p>Get your coffee quickly with our efficient service.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-users"></i>
+                <h3>Friendly Staff</h3>
+                <p>Our team is always ready to serve you with a smile.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-coffee"></i>
+                <h3>Premium Beans</h3>
+                <p>We use only the finest beans for a rich flavor.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <h2>Our Coffee Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=400&q=80" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>Rich and bold espresso shot.</p>
+                <span class="price">₹120</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Creamy milk foam with espresso.</p>
+                <span class="price">₹150</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Frappuccino">
+                <h3>Frappuccino</h3>
+                <p>Chilled coffee with whipped cream.</p>
+                <span class="price">₹180</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Latte">
+                <h3>Latte</h3>
+                <p>Smooth blend of espresso and steamed milk.</p>
+                <span class="price">₹160</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Mocha">
+                <h3>Mocha</h3>
+                <p>Espresso with chocolate and steamed milk.</p>
+                <span class="price">₹170</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=400&q=80" alt="Americano">
+                <h3>Americano</h3>
+                <p>Espresso with hot water for a smooth taste.</p>
+                <span class="price">₹130</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container about-flex">
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="About Coffee Shop">
+            </div>
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>With over 15 years of experience, Brew Bliss Café is passionate about delivering the best coffee experience. Our cozy environment, premium beans, and expert baristas make us the perfect spot for coffee lovers in Nashik.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=400&q=80" alt="Takeaway">
+                    <h3>Takeaway</h3>
+                    <p>Grab your favorite coffee on the go with our quick takeaway service.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Creative Drinks">
+                    <h3>Creative Drinks</h3>
+                    <p>Enjoy a variety of creative and seasonal drinks crafted by our baristas.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Cozy Ambience">
+                    <h3>Cozy Ambience</h3>
+                    <p>Relax in our warm and inviting space, perfect for work or leisure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 8px;"><ellipse cx="16" cy="24" rx="12" ry="4" fill="#ffb347"/><path d="M8 10c0-3 4-5 8-5s8 2 8 5v7c0 3-4 5-8 5s-8-2-8-5v-7z" fill="#fff" stroke="#ff6b6b" stroke-width="2"/><path d="M24 13c2 0 4 2 4 4s-2 4-4 4" stroke="#ff6b6b" stroke-width="2" fill="none"/></svg>
+                Brew Bliss Café
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="footer-contact">
+                <p><i class="fas fa-map-marker-alt"></i> Nashik</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 8901</p>
+                <p><i class="fas fa-envelope"></i> info@brewblisscafe.com</p>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2024 Brew Bliss Café. All rights reserved.</p>
+    </footer>
+</body>
+</html>
