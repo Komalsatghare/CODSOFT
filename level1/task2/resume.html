@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Komal Satghare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">KS</span>
+                    <span class="logo-full">Komal Satghare</span>
+                </a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Resume Section -->
+    <section class="resume-section">
+        <div class="container">
+            <h2>My Resume</h2>
+            <div class="resume-content">
+                <div class="resume-download">
+                    <h3>Download My Resume</h3>
+                    <p>Click the button below to download my complete resume in PDF format.</p>
+                    <a href="resume.pdf" class="download-btn" download>
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+
+            <!-- Opportunities Section -->
+            <div class="opportunities-section">
+                <h3>Looking for Opportunities in:</h3>
+                <ul class="opportunities-list">
+                    <li><i class="fas fa-code"></i> Frontend Development</li>
+                    <li><i class="fas fa-paint-brush"></i> UI/UX Design</li>
+                    <li><i class="fas fa-laptop-code"></i> Full Stack Web Development (MERN)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Modal -->
+    <div id="resumeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="document.getElementById('resumeModal').style.display='none'">&times;</span>
+            <iframe src="resume.pdf" width="100%" height="600px"></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Komal Satghare. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background: white;
+            font-family: monospace;
+            padding: 20px;
+        }
+        .diagram {
+            white-space: pre;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="diagram">
++-------------------------------------+
+          |              User / Admin           |
+          +-------------------------------------+
+                    |               |
+                    v               v
+     +--------------------+   +--------------------+
+     |  User Operations   |   |  Admin Operations  |
+     | (Issue/Return/View)|   | (Add/Remove/View)  |
+     +--------------------+   +--------------------+
+                    \               /
+                     \             /
+                      v           v
+           +--------------------------------+
+           |     Presentation Layer (Console)|
+           +--------------------------------+
+                             |
+                             v
+              +-------------------------------+
+              |   Business Logic Layer (OOP)   |
+              | Classes: Book, Library, User, Admin |
+              +-------------------------------+
+                             |
+                             v
+          +-------------------------------------------+
+          |   Data Structure Layer (ArrayList/LinkedList)|
+          |  Manages collections of Books & Users/Admins |
+          +-------------------------------------------+
+                             |
+                             v
+          +------------------------------------------+
+          |   Storage Layer (Optional - File/DB)     |
+          | For saving data if required (not in DSA version)|
+          +------------------------------------------+
+    </div>
+</body>
+</html> 

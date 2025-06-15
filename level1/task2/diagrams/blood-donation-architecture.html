@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background: white;
+            font-family: monospace;
+            padding: 20px;
+        }
+        .architecture-diagram {
+            white-space: pre;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="architecture-diagram">
++-----------------------------+
+|         User (Donor/Receiver)|
++-----------------------------+
+            |
+            v
++-----------------------------+
+|      Presentation Layer     |    (Java Swing / Console)
++-----------------------------+
+            |
+            v
++-----------------------------+
+|       Business Logic Layer   |    (Java Classes - User, Donor, Recipient, BloodBank)
++-----------------------------+
+            |
+            v
++-----------------------------+
+|     Data Access Layer        |    (File Handling / MySQL / ArrayList)
++-----------------------------+
+            |
+            v
++-----------------------------+
+|      Database / Storage      |   (Flat file / Database)
++-----------------------------+
+    </div>
+</body>
+</html> 

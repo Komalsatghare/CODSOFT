@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Komal Satghare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            align-items: center; /* Center horizontally */
+            justify-content: center; /* Center vertically */
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 8px;
+            position: relative;
+            max-height: 90vh; /* Make the modal content scrollable */
+            overflow-y: auto;
+            box-sizing: border-box; /* Include padding and border in sizing */
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #aaa; /* Added color for visibility */
+        }
+        .close-modal:hover {
+            color: black;
+        }
+
+        .diagram-tabs {
+            margin: 20px 0;
+            text-align: center;
+            display: flex; /* Arrange tabs in a row */
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .diagram-tab {
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 4px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+
+        .diagram-tab.active {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .diagram-content {
+            display: none; /* Hidden by default */
+            font-family: monospace;
+            white-space: pre;
+            font-size: 14px;
+            line-height: 1.4;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            overflow-x: auto;
+            box-sizing: border-box; /* Include padding and border in sizing */
+            border: 1px dashed red; /* Added for debugging */
+        }
+
+        .diagram-content.active {
+            display: block; /* Show when active */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">KS</span>
+                    <span class="logo-full">Komal Satghare</span>
+                </a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1: Blood Donation Management System -->
+                <div class="project-card">
+                    <img src="https://content.presspage.com/uploads/1873/1920_donatingblood.jpg?10000" alt="Blood Donation Management System">
+                    <div class="project-info">
+                        <h3>Blood Donation Management System (Java)</h3>
+                        <p class="project-description">A desktop-based mini project developed in Java to manage blood donation activities.</p>
+                        <div class="project-features">
+                            <h4>✅ Features:</h4>
+                            <ul>
+                                <li>Exception Handling for input validation and error control</li>
+                                <li>Menu-driven interface to add, view, and manage donors and recipients</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <h4>✅ Technologies Used:</h4>
+                            <span>Java</span>
+                            <span>OOP Concepts</span>
+                            <span>Exception Handling</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn" target="_blank">View Code</a>
+                            <button class="btn view-diagrams-btn" onclick="openModal('blood-donation')">View Diagrams</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Library Management System -->
+                <div class="project-card">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.F8dYv0VspQESPpbewXGBXgHaEU&pid=Api&P=0&h=220" alt="Library Management System">
+                    <div class="project-info">
+                        <h3>Library Management System (C++ | Data Structures)</h3>
+                        <p class="project-description">Console-based project built using C++ and various Data Structures to handle library operations such as issuing and returning books.</p>
+                        <div class="project-features">
+                            <h4>✅ Features:</h4>
+                            <ul>
+                                <li>Linked List for dynamic storage</li>
+                                <li>File Handling for data persistence</li>
+                                <li>Menu-based system for easy navigation</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <h4>✅ Technologies Used:</h4>
+                            <span>C++</span>
+                            <span>Data Structures (Linked List, Stack)</span>
+                            <span>File Handling</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn" target="_blank">View Code</a>
+                            <button class="btn view-diagrams-btn" onclick="openModal('library')">View Diagrams</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Social Donation Platform -->
+                <div class="project-card">
+                    <img src="https://imgscf.slidemembers.com/docs/1/1/275/donation_274943.jpg" alt="Social Donation Platform">
+                    <div class="project-info">
+                        <h3>Social Donation Platform (Web App)</h3>
+                        <p class="project-description">A full-stack web application developed during Tech Horizon National Level Hackathon to connect needy individuals with donors and organizations.</p>
+                        <div class="project-features">
+                            <h4>✅ Entities: Needy | Donor | Organization</h4>
+                            <ul>
+                                <li>User Authentication (Login/Signup)</li>
+                                <li>Separate Dashboards for each entity</li>
+                                <li>Donation Request and Approval System</li>
+                                <li>Fully Responsive Frontend with Backend Integration</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <h4>✅ Technologies Used:</h4>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                            <span>Express.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn" target="_blank">View Live</a>
+                            <a href="#" class="btn" target="_blank">View Code</a>
+                            <button class="btn view-diagrams-btn" onclick="openModal('social-donation')">View Diagrams</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blood Donation System Modal -->
+    <div id="blood-donation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('blood-donation')">&times;</span>
+            <h2>Blood Donation Management System Diagrams</h2>
+            <div class="diagram-tabs">
+                <button class="diagram-tab active" onclick="showDiagram('blood-donation', 'class', this)">Class Diagram</button>
+                <button class="diagram-tab" onclick="showDiagram('blood-donation', 'architecture', this)">Architecture</button>
+            </div>
+            <div id="blood-donation-class" class="diagram-content active">
++-----------------------+
+|      User             |
++-----------------------+
+| - userID: int         |
+| - name: String        |
+| - age: int           |
+| - bloodGroup: String  |
+| - contact: String     |
++-----------------------+
+| + register()          |
+| + login()            |
++-----------------------+
+
+           ▲
+           |
+           |
++-----------------------+         +------------------------+
+|     Donor             |         |     Recipient           |
++-----------------------+         +------------------------+
+| - donationDate: Date  |         | - requestDate: Date     |
+| - location: String    |         | - requiredBloodGroup: String |
++-----------------------+         +------------------------+
+| + donateBlood()       |         | + requestBlood()        |
++-----------------------+         +------------------------+
+
+                 |
+                 |
+      +---------------------+
+      |     BloodBank       |
+      +---------------------+
+      | - bloodStock: Map<> |
+      +---------------------+
+      | + addDonor()        |
+      | + addRecipient()    |
+      | + checkAvailability() |
+      +---------------------+
+            </div>
+            <div id="blood-donation-architecture" class="diagram-content">
++-----------------------------+
+|         User (Donor/Receiver)|
++-----------------------------+
+            |
+            v
++-----------------------------+
+|      Presentation Layer     |    (Java Swing / Console)
++-----------------------------+
+            |
+            v
++-----------------------------+
+|       Business Logic Layer   |    (Java Classes - User, Donor, Recipient, BloodBank)
++-----------------------------+
+            |
+            v
++-----------------------------+
+|     Data Access Layer        |    (File Handling / MySQL / ArrayList)
++-----------------------------+
+            |
+            v
++-----------------------------+
+|      Database / Storage      |   (Flat file / Database)
++-----------------------------+
+            </div>
+        </div>
+    </div>
+
+    <!-- Library System Modal -->
+    <div id="library-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('library')">&times;</span>
+            <h2>Library Management System Diagrams</h2>
+            <div class="diagram-tabs">
+                <button class="diagram-tab active" onclick="showDiagram('library', 'class', this)">Class Diagram</button>
+                <button class="diagram-tab" onclick="showDiagram('library', 'architecture', this)">Architecture</button>
+            </div>
+            <div id="library-class" class="diagram-content active">
++--------------------------+
+|         Book             |
++--------------------------+
+| - bookID: int            |
+| - title: String          |
+| - author: String         |
+| - isIssued: boolean      |
++--------------------------+
+| + issueBook()            |
+| + returnBook()           |
++--------------------------+
+
+                ▲
+                |
+                |
++--------------------------+
+|        Library           |
++--------------------------+
+| - books: List<Book>      |
++--------------------------+
+| + addBook(Book)          |
+| + removeBook(bookID)     |
+| + searchBook(title)      |
+| + displayAllBooks()      |
+| + issueBook(bookID)      |
+| + returnBook(bookID)     |
++--------------------------+
+
+                ▲
+         _______|_______
+        |               |
++----------------+   +----------------+
+|      User      |   |      Admin      |
++----------------+   +----------------+
+| - userID: int  |   | - adminID: int  |
+| - name: String |   | - name: String  |
+| - issuedBooks: |   +----------------+
+|   List<Book>   |   | + addBook()     |
++----------------+   | + removeBook()  |
+| + issueBook()  |   | + viewUsers()   |
+| + returnBook() |   +----------------+
+| + viewIssued() |
++----------------+
+            </div>
+            <div id="library-architecture" class="diagram-content">
++-------------------------------------+
+          |              User / Admin           |
+          +-------------------------------------+
+                    |               |
+                    v               v
+     +--------------------+   +--------------------+
+     |  User Operations   |   |  Admin Operations  |
+     | (Issue/Return/View)|   | (Add/Remove/View)  |
+     +--------------------+   +--------------------+
+                    \               /
+                     \             /
+                      v           v
+           +--------------------------------+
+           |     Presentation Layer (Console)|
+           +--------------------------------+
+                             |
+                             v
+              +-------------------------------+
+              |   Business Logic Layer (OOP)   |
+              | Classes: Book, Library, User, Admin |
+              +-------------------------------+
+                             |
+                             v
+          +-------------------------------------------+
+          |   Data Structure Layer (ArrayList/LinkedList)|
+          |  Manages collections of Books & Users/Admins |
+          +-------------------------------------------+
+                             |
+                             v
+          +------------------------------------------+
+          |   Storage Layer (Optional - File/DB)     |
+          | For saving data if required (not in DSA version)|
+          +------------------------------------------+
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Donation Platform Modal -->
+    <div id="social-donation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('social-donation')">&times;</span>
+            <h2>Social Donation Platform Diagrams</h2>
+            <div class="diagram-tabs">
+                <button class="diagram-tab active" onclick="showDiagram('social-donation', 'class', this)">Class Diagram</button>
+                <button class="diagram-tab" onclick="showDiagram('social-donation', 'architecture', this)">Architecture</button>
+            </div>
+            <div id="social-donation-class" class="diagram-content active">
++---------------------------+
+|          User             |
++---------------------------+
+| - userID: int             |
+| - name: String            |
+| - contact: String         |
+| - address: String         |
++---------------------------+
+| + login()                 |
+| + register()              |
++---------------------------+
+         ▲          ▲
+         |          |
++-------------+  +-------------+
+|   Donor     |  |   Needy     |
++-------------+  +-------------+
+| + donateItem()| | + requestItem() |
+| + viewReq()   | | + viewStatus()  |
++-------------+  +-------------+
+
+            ▲
+            |
++---------------------------+
+|      Organization/Admin    |
++---------------------------+
+| + approveRequest()        |
+| + notifyDonor()          |
+| + notifyNeedy()          |
+| + manageInventory()      |
++---------------------------+
+
+            ▲
+            |
++---------------------------+
+|          Shop             |
++---------------------------+
+| - shopID: int             |
+| - shopName: String        |
+| - inventory: List<Item>   |
++---------------------------+
+| + provideItem()          |
+| + updateStock()          |
++---------------------------+
+
++---------------------------+
+|          Item             |
++---------------------------+
+| - itemID: int             |
+| - itemName: String        |
+| - quantity: int           |
++---------------------------+
+| + checkAvailability()     |
++---------------------------+
+            </div>
+            <div id="social-donation-architecture" class="diagram-content">
+                     +-----------------------------+
+                    |         Users (Needy/Donor)  |
+                    +-----------------------------+
+                                |
+                                v
+                    +-----------------------------+
+                    |     Presentation Layer      | (Web App UI / Mobile App)
+                    +-----------------------------+
+                                |
+                                v
+                    +-----------------------------+
+                    |     Application Layer       |
+                    | Classes: User, Donor, Needy |
+                    +-----------------------------+
+                                |
+          +---------------------+----------------------+
+          |                                            |
+          v                                            v
++-------------------------+                +-------------------------+
+| Organization/Admin Ops  |                |        Shop Ops         |
+| (Approve, Notify, Manage)|               |  (Provide, Update Stock)|
++-------------------------+                +-------------------------+
+                                |
+                                v
+                    +-----------------------------+
+                    |    Data Access Layer        | (APIs, Services)
+                    +-----------------------------+
+                                |
+                                v
+                    +-----------------------------+
+                    |  Database Layer / Storage   |
+                    | Tables: Users, Items, Shops,|
+                    | Requests, Donations        |
+                    +-----------------------------+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Komal Satghare. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(projectId) {
+            // Close all currently open modals first
+            const allModals = document.querySelectorAll('.modal');
+            allModals.forEach(modal => {
+                modal.style.display = 'none';
+            });
+
+            const modal = document.getElementById(`${projectId}-modal`);
+            if (modal) {
+                modal.style.display = 'flex'; // Use flex to ensure centering and correct height calculation
+                // Ensure the first tab is active when opening the modal
+                const firstTabButton = modal.querySelector('.diagram-tab:first-child');
+                if (firstTabButton) {
+                    // Manually trigger the showDiagram function for the first tab
+                    const diagramType = firstTabButton.getAttribute('onclick').match(/showDiagram\('[^\']+', '([a-z-]+)'\)/)[1];
+                    showDiagram(projectId, diagramType, firstTabButton);
+                }
+            }
+        }
+
+        function closeModal(projectId) {
+            const modal = document.getElementById(`${projectId}-modal`);
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        function showDiagram(projectId, diagramType, clickedButton) {
+            const modal = document.getElementById(`${projectId}-modal`);
+            if (!modal) return; // Exit if modal not found
+
+            // Update tab styles
+            const tabs = modal.querySelectorAll('.diagram-tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            if (clickedButton) {
+                clickedButton.classList.add('active');
+            }
+
+            // Hide all diagrams and then show the selected one
+            const diagrams = modal.querySelectorAll('.diagram-content');
+            diagrams.forEach(diagram => {
+                diagram.classList.remove('active');
+                diagram.style.display = 'none'; // Explicitly hide
+            });
+
+            const selectedDiagram = document.getElementById(`${projectId}-${diagramType}`);
+            if (selectedDiagram) {
+                selectedDiagram.classList.add('active');
+                selectedDiagram.style.display = 'block'; // Explicitly show
+            }
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background: white;
+            font-family: monospace;
+            padding: 20px;
+        }
+        .diagram {
+            white-space: pre;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="diagram">
++--------------------------+
+|         Book             |
++--------------------------+
+| - bookID: int            |
+| - title: String          |
+| - author: String         |
+| - isIssued: boolean      |
++--------------------------+
+| + issueBook()            |
+| + returnBook()           |
++--------------------------+
+
+                ▲
+                |
+                |
++--------------------------+
+|        Library           |
++--------------------------+
+| - books: List<Book>      |
++--------------------------+
+| + addBook(Book)          |
+| + removeBook(bookID)     |
+| + searchBook(title)      |
+| + displayAllBooks()      |
+| + issueBook(bookID)      |
+| + returnBook(bookID)     |
++--------------------------+
+
+                ▲
+         _______|_______
+        |               |
++----------------+   +----------------+
+|      User      |   |      Admin      |
++----------------+   +----------------+
+| - userID: int  |   | - adminID: int  |
+| - name: String |   | - name: String  |
+| - issuedBooks: |   +----------------+
+|   List<Book>   |   | + addBook()     |
++----------------+   | + removeBook()  |
+| + issueBook()  |   | + viewUsers()   |
+| + returnBook() |   +----------------+
+| + viewIssued() |
++----------------+
+    </div>
+</body>
+</html> 

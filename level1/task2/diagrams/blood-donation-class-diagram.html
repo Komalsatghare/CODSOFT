@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background: white;
+            font-family: monospace;
+            padding: 20px;
+        }
+        .class-diagram {
+            white-space: pre;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="class-diagram">
++-----------------------+
+|      User             |
++-----------------------+
+| - userID: int         |
+| - name: String        |
+| - age: int           |
+| - bloodGroup: String  |
+| - contact: String     |
++-----------------------+
+| + register()          |
+| + login()            |
++-----------------------+
+
+           ▲
+           |
+           |
++-----------------------+         +------------------------+
+|     Donor             |         |     Recipient           |
++-----------------------+         +------------------------+
+| - donationDate: Date  |         | - requestDate: Date     |
+| - location: String    |         | - requiredBloodGroup: String |
++-----------------------+         +------------------------+
+| + donateBlood()       |         | + requestBlood()        |
++-----------------------+         +------------------------+
+
+                 |
+                 |
+      +---------------------+
+      |     BloodBank       |
+      +---------------------+
+      | - bloodStock: Map<> |
+      +---------------------+
+      | + addDonor()        |
+      | + addRecipient()    |
+      | + checkAvailability() |
+      +---------------------+
+    </div>
+</body>
+</html> 

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komal Satghare - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <div class="navbar-left">
+                <img src="https://static.vecteezy.com/system/resources/previews/018/969/936/original/woman-graduate-college-happy-graduate-student-with-diploma-wearing-a-robe-and-a-square-academic-cap-flat-illustration-on-white-background-vector.jpg" alt="Animated Girl" class="avatar-img">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">KS</span>
+                        <span class="logo-full">Komal Satghare</span>
+                    </a>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-btns">
+                <a href="contact.html" class="btn hire-btn">Hire Me</a>
+                <a href="resume.html" class="btn download-btn">Download Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section (Home) -->
+    <header>
+        <div class="container hero-flex">
+            <div class="hero-content">
+                <h1>Komal Satghare</h1>
+                <p class="tagline">Computer Engineering Student | Web Developer</p>
+                <span id="typed-text" class="typed-effect"></span>
+                <p class="intro">Hi, I'm Komal Satghare, a 2nd-year Computer Engineering student passionate about Web Development and Coding.</p>
+                <div class="scroll-down"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Interests & Hobbies Section -->
+    <section class="interests-section">
+      <div class="container">
+        <h2>My Interests & Hobbies 🎨🎤🖌️</h2>
+        <div class="interests-grid">
+          <div class="interest-card painting">
+            <h3>🎨 Painting & Sketching</h3>
+            <p class="interest-quote">"Every canvas is a journey all its own."</p>
+            <p>Sceneries & Faces</p>
+            <a href="https://instagram.com/brush.n.beats" target="_blank" class="interest-link">@brush.n.beats</a>
+          </div>
+          <div class="interest-card singing">
+            <h3>🎤 Singing</h3>
+            <p class="interest-quote">"Where words fail, music speaks."</p>
+          </div>
+          <div class="interest-card mehendi">
+            <h3>🖌️ Mehendi Artist</h3>
+            <p class="interest-quote">"Mehendi is the art that colors my world."</p>
+          </div>
+          <div class="interest-card uiux">
+            <h3>🖥️ UI/UX</h3>
+            <p class="interest-quote">"Design is intelligence made visible."</p>
+            <p>I love creating user-friendly and visually appealing interfaces.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Made with ❤️ by Komal Satghare</p>
+      <div class="social-icons">
+        <a href="#">GitHub</a> |
+        <a href="#">LinkedIn</a> |
+        <a href="#">Instagram</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        new Typed('#typed-text', {
+          strings: [
+            'Web Developer',
+            'UI/UX Enthusiast',
+            'Open to Opportunities',
+            'Let\'s build something great!'
+          ],
+          typeSpeed: 60,
+          backSpeed: 30,
+          backDelay: 1200,
+          loop: true
+        });
+      });
+    </script>
+</body>
+</html>
